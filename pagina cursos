@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-color: #f8f9fa;
+        }
+        
+        /* Estilo do card personalizados */
+        
+        .custom-card {
+            margin-right: 20px; /* Ajuste a margem direita do card como desejar */
+            margin-left: 20px; /* Ajuste a margem esquerda do card como desejar */
+            margin-top: 80px; /* Ajuste a margem superior do card como desejar */
+            margin-bottom: 20px; /* Ajuste a margem inferior do card como desejar */
+            max-width: 88%;
+            flex: 1;
+        }
+        
+        /* Estilo do formulário personalizados */
+        
+        .custom-form {
+            margin-left: 20px; /* Ajuste a margem esquerda do formulário como desejar */
+            margin-right: 20px; /* Ajuste a margem direita do formulário como desejar */
+            margin-top: 20px; /* Ajuste a margem superior do formulário como desejar */
+            margin-bottom: 20px; /* Ajuste a margem inferior do formulário como desejar */
+            flex: 1;
+        }
+
+        /* Estilizando a barra de navegação */
+
+        .nav-pills .nav-item .nav-link {
+            color: #333; /* Cor do texto */
+            background-color: #f8f9fa; /* Cor de fundo */
+            border-radius: 0; /* Borda arredondada */
+            display: flex;
+        }    
+
+        .nav-pills .nav-item .nav-link.active {
+            color: #fff; /* Cor do texto ativo */
+            background-color: #007bff; /* Cor de fundo ativo */
+        }
+
+        .nav-pills .nav-item .nav-link:hover {
+            background-color: #e9ecef; /* Cor de fundo ao passar o mouse */
+        }
+
+        .nav-pills .dropdown-menu {
+            background-color: #f8f9fa; /* Cor de fundo do menu suspenso */
+            border: none; /* Remova a borda */
+        }
+
+        .nav-pills .dropdown-item {
+            color: #333; /* Cor do texto do menu suspenso */
+        }
+
+        .nav-pills .dropdown-item:hover {
+            background-color: #e9ecef; /* Cor de fundo do item do menu suspenso ao passar o mouse */
+        }
+
+        /* Estilo para divider no menu suspenso */
+        .nav-pills .dropdown-divider {
+            border-top-color: #ccc;
+        }
+
+        /* Estilo para links desabilitados */
+        .nav-pills .nav-link.disabled {
+            color: #999; /* Cor do texto desabilitado */
+        }
+
+        /* Alinhar os itens verticalmente no centro */
+        .nav-pills .nav-item {
+          display: flex;
+          align-items: center;
+        }
+
+        /* Adicionar espaçamento entre os itens da navbar */
+        .nav-pills .nav-item {
+            margin-right: 10px; /* Espaçamento horizontal entre os itens */
+        }
+
+        /* Remover margem direita do último item para evitar excesso de espaçamento */
+        .nav-pills .nav-item:last-child {
+            margin-right: 0;
+        }
+
+        /* Adicionar espaçamento entre os itens do menu suspenso */
+        .nav-pills .dropdown-menu .dropdown-item {
+            margin: 5px 0; /* Espaçamento vertical entre os itens do menu suspenso */
+        }
+
+        /* Estilizando a barra de navegação */
+        .nav-pills {
+            display: flex;
+            justify-content: center; /* Alinhamento horizontal no centro */
+            align-items: center; /* Alinhamento vertical no centro */
+            height: 100px; /* Altura da barra de navegação (ajuste conforme necessário) */
+            background-color: #f8f9fa; /* Cor de fundo da barra de navegação */
+        }
+
+        /* Ajustar a largura dos itens para evitar que ocupem toda a largura da barra */
+        .nav-pills .nav-item {
+            flex: 0 0 auto;
+            margin: 0 10px; /* Espaçamento horizontal entre os itens */
+        }
+
+        /* Ajustar estilos para os itens ativos */
+        .nav-pills .nav-item .nav-link.active {
+            color: #fff; /* Cor do texto ativo */
+            background-color: #007bff; /* Cor de fundo ativo */
+        }
+
+        /* Ajustar estilo para links desabilitados */
+        .nav-pills .nav-link.disabled {
+            color: #999; /* Cor do texto desabilitado */
+        }
+        
+        /* Estilizando cartoes cursos de navegação */
+
+        .custom-margin {
+            margin-top: 10px; /* Ajuste a margem superior do card como desejar */
+            margin-bottom: 10px; /* Ajuste a margem inferior do card como desejar */
+            margin-left: 10px; /* Ajuste a margem esquerda do card como desejar */
+            margin-right: 10px; /* Ajuste a margem direita do card como desejar */
+        }
+
+        .custom-padding {
+           /* padding: 20%; /* Preenchimento interno dos cartões */
+        }
+
+        /* Estilos personalizados */
+        .card {
+            border: none; /* Remova as bordas dos cartões */
+            max-width: 18rem; /* Ajuste a largura máxima do cartão */
+
+        }
+
+        .card-img-top {
+            max-height: 200px; /* Ajuste a altura máxima da imagem do cartão */
+            object-fit: cover; /* Redimensione a imagem para preencher o espaço */
+        }
+
+        .card-title {
+            font-size: 1.25rem; /* Tamanho do título do cartão */
+            margin-top: 10px; /* Margem superior do título */
+        }
+
+        .card-text {
+            font-size: 1rem; /* Tamanho do texto do cartão */
+        }
+
+        
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 custom-card">
+                <!-- Card -->
+                <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Some quick adfadfadfadfasdfadfasdfadsfadfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfexample text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 custom-form">
+                <!-- Formulário -->
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- navegação navbar do Bootstrap -->
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+    
+    <!-- navegação cards cursos do Bootstrap -->
+
+    <div class="container">  
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card custom-margin custom-padding">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card custom-margin custom-padding">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card custom-margincustom-padding">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navegação + 3 cards cursos do Bootstrap -->
+
+    <div class="container">  
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card custom-margin custom-padding">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card custom-margin custom-padding">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card custom-margin custom-padding">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
