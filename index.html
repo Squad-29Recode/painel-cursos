@@ -155,7 +155,75 @@
             text-align: justify; /* Alinhamento do texto do cartão */
         }
 
-        
+        /*começo footer */
+
+        footer {
+        background-image: linear-gradient(#535353a4,#000000);
+        /*background-color: rgb(63, 63, 63);*/
+        padding: 10px;
+    }
+
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-info {
+        color: white;
+        font-size: medium;
+    }
+
+    .end-info {
+        color: white;
+        font-size: medium;
+    }
+
+    .footer-text {
+        text-align: center;
+        color: white;
+
+    }
+
+    .insta {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        -webkit-background-clip: text;
+
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+
+    .face {
+        color: #3B5998;
+        cursor: pointer;
+    }
+
+    .tw {
+        color: #00acee;
+        cursor: pointer;
+    }
+
+    .mess {
+        color: #3B5998;
+        cursor: pointer;
+
+    }
+
+    .whats {
+        color: rgb(50, 192, 14);
+        cursor: pointer;
+    }
+
+
+    @media screen and (max-width:600px) {
+        footer .footer-info {
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+
+        /*fim footer */
 
 
 
@@ -165,6 +233,7 @@
     </style>
 </head>
 <body>
+
     <!-- navegação navbar do Bootstrap -->
     <nav class="navbar navbar-dark bg-info">
       <div class="container-fluid d-flex justify-content-center align-items-center">
@@ -303,93 +372,39 @@
     </div>
 
     <!-- navegação empresas parceiras do Bootstrap -->
-    
-    <!-- As a heading -->
-    <nav class="navbar navbar-dark bg-success">
-      <div class="container-fluid d-flex justify-content-center align-items-center">
-        <span class="navbar-brand mb-0 h1">Parcerias e Vagas</span>
-      </div>
-    </nav>
 
     <!-- navegação cards empresas parceiras do Bootstrap -->
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-4 mt-4 mb-4">
-          <div class="card custom-card-bg">
-            <img src="assets/google.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small>Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-    
-        <div class="col-md-4 mt-4 mb-4">
-          <div class="card custom-card-bg">
-            <img src="assets/bradeco.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small>Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-    
-        <div class="col-md-4 mt-4 mb-4">
-          <div class="card custom-card-bg">
-            <img src="assets/itau.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small>Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <footer>
+      <div class="footer-info">
+          <div class="contact-info">
 
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-4 mt-4 mb-4">
-          <div class="card custom-card-bg">
-            <img src="assets/dell.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small>Last updated 3 mins ago</small></p>
-            </div>
+              <h5>Telefone para contato</h5>
+              </p>
+              <p> (11) 3858-0777 </p>
+              <p> (11) 97770-3952</p>
           </div>
-        </div>
-    
-        <div class="col-md-4 mt-4 mb-4">
-          <div class="card custom-card-bg">
-            <img src="assets/nestle.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small>Last updated 3 mins ago</small></p>
-            </div>
+          <div class="end-info">
+              <h5>Endereço</h5>
+              <p>Rua Gaivota, 125 - Bairro Moema</p>
+              <p> São Paulo - SP</p>
           </div>
-        </div>
-    
-        <div class="col-md-4 mt-4 mb-4">
-          <div class="card custom-card-bg">
-            <img src="assets/c6bank.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small>Last updated 3 mins ago</small></p>
-            </div>
+          <div class="social-media text-white">
+              <h5> Nossas mídias sociais</h5>
+              <i class="bi bi-instagram insta fs-4"
+                  onclick="window.open('https://www.instagram.com/', '_blank')"></i>
+              <i class="bi bi-facebook face fs-4"
+                  onclick="window.open('https://www.facebook.com/', '_blank')"></i>
+              <i class="bi bi-twitter tw fs-4" onclick="window.open('https://www.twitter.com/', '_blank')"></i>
+              <i class="bi bi-messenger mess fs-4"
+                  onclick="window.open('https://www.messenger.com/', '_blank')"></i>
+              <i class="bi bi-whatsapp whats fs-4 "
+                  onclick="window.open('https://web.whatsapp.com/', '_blank')"></i>
           </div>
-        </div>
       </div>
-    </div>
-    
-       
-
-    <img src="..." class="rounded float-start" alt="...">
-    <img src="..." class="rounded float-end" alt="...">
+      <div class="footer-text">
+          <p>&copy; 2023 Trampo360°. Todos os direitos reservados.</p>
+      </div>
+  </footer>
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
