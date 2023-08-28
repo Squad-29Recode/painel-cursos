@@ -1,412 +1,334 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cursos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../exe.MOD2/ag.css">
     <style>
-        /* Estilos personalizados */
-        body {
-            background-color: #f8f9fa;
+
+        h1 {
+            margin-top: 30px;
+        margin-left: 35%;
+        color: #792882 ;
         }
-        
-        /* Estilo do card personalizados */
-        
+          h2 {
+            margin-left: 7%;
+            margin-top: 30px;
+          }  
+            
+            /*começo card */
         .custom-card {
-            margin-right: 20px; /* Ajuste a margem direita do card como desejar */
-            margin-left: 20px; /* Ajuste a margem esquerda do card como desejar */
-            margin-top: 80px; /* Ajuste a margem superior do card como desejar */
-            margin-bottom: 20px; /* Ajuste a margem inferior do card como desejar */
+            margin-right: 20px;
+            /* Ajuste a margem direita do card como desejar */
+            margin-left: 20px;
+            /* Ajuste a margem esquerda do card como desejar */
+            margin-top: 80px;
+            /* Ajuste a margem superior do card como desejar */
+            margin-bottom: 20px;
+            /* Ajuste a margem inferior do card como desejar */
             max-width: 88%;
             flex: 1;
         }
-        
-        /* Estilo do formulário personalizados */
-        
-        .custom-form {
-            margin-left: 20px; /* Ajuste a margem esquerda do formulário como desejar */
-            margin-right: 20px; /* Ajuste a margem direita do formulário como desejar */
-            margin-top: 20px; /* Ajuste a margem superior do formulário como desejar */
-            margin-bottom: 20px; /* Ajuste a margem inferior do formulário como desejar */
-            flex: 1;
-        }
-
-        /* Estilizando a barra de navegação */
-
-        .nav-pills .nav-item .nav-link {
-            color: #333; /* Cor do texto */
-            background-color: #f8f9fa; /* Cor de fundo */
-            border-radius: 0; /* Borda arredondada */
-            display: flex;
-        }    
-
-        .nav-pills .nav-item .nav-link.active {
-            color: #fff; /* Cor do texto ativo */
-            background-color: #007bff; /* Cor de fundo ativo */
-        }
-
-        .nav-pills .nav-item .nav-link:hover {
-            background-color: #e9ecef; /* Cor de fundo ao passar o mouse */
-        }
-
-        .nav-pills .dropdown-menu {
-            background-color: #f8f9fa; /* Cor de fundo do menu suspenso */
-            border: none; /* Remova a borda */
-        }
-
-        .nav-pills .dropdown-item {
-            color: #333; /* Cor do texto do menu suspenso */
-        }
-
-        .nav-pills .dropdown-item:hover {
-            background-color: #e9ecef; /* Cor de fundo do item do menu suspenso ao passar o mouse */
-        }
-
-        /* Estilo para divider no menu suspenso */
-        .nav-pills .dropdown-divider {
-            border-top-color: #ccc;
-        }
-
-        /* Estilo para links desabilitados */
-        .nav-pills .nav-link.disabled {
-            color: #999; /* Cor do texto desabilitado */
-        }
-
-        /* Alinhar os itens verticalmente no centro */
-        .nav-pills .nav-item {
-          display: flex;
-          align-items: center;
-        }
-
-        /* Adicionar espaçamento entre os itens da navbar */
-        .nav-pills .nav-item {
-            margin-right: 10px; /* Espaçamento horizontal entre os itens */
-        }
-
-        /* Remover margem direita do último item para evitar excesso de espaçamento */
-        .nav-pills .nav-item:last-child {
-            margin-right: 0;
-        }
-
-        /* Adicionar espaçamento entre os itens do menu suspenso */
-        .nav-pills .dropdown-menu .dropdown-item {
-            margin: 5px 0; /* Espaçamento vertical entre os itens do menu suspenso */
-        }
-
-        /* Estilizando a barra de navegação */
-        .nav-pills {
-            display: flex;
-            justify-content: center; /* Alinhamento horizontal no centro */
-            align-items: center; /* Alinhamento vertical no centro */
-            height: 100px; /* Altura da barra de navegação (ajuste conforme necessário) */
-            background-color: #f8f9fa; /* Cor de fundo da barra de navegação */
-        }
-
-        /* Ajustar a largura dos itens para evitar que ocupem toda a largura da barra */
-        .nav-pills .nav-item {
-            flex: 0 0 auto;
-            margin: 0 10px; /* Espaçamento horizontal entre os itens */
-        }
-
-        /* Ajustar estilos para os itens ativos */
-        .nav-pills .nav-item .nav-link.active {
-            color: #fff; /* Cor do texto ativo */
-            background-color: #007bff; /* Cor de fundo ativo */
-        }
-
-        /* Ajustar estilo para links desabilitados */
-        .nav-pills .nav-link.disabled {
-            color: #999; /* Cor do texto desabilitado */
-        }
-        
-        /* Estilizando cartoes cursos de navegação */
 
         .custom-margin {
-            margin-top: 10px; /* Ajuste a margem superior do card como desejar */
-            margin-bottom: 10px; /* Ajuste a margem inferior do card como desejar */
-            margin-left: 10px; /* Ajuste a margem esquerda do card como desejar */
-            margin-right: 10px; /* Ajuste a margem direita do card como desejar */
+            margin-top: 50px;
+            /* Ajuste a margem superior do card como desejar */
+            margin-bottom: 10px;
+            /* Ajuste a margem inferior do card como desejar */
+            margin-left: 10px;
+            /* Ajuste a margem esquerda do card como desejar */
+            margin-right: 10px;
+            /* Ajuste a margem direita do card como desejar */
         }
 
         .custom-padding {
-           /* padding: 20%; /* Preenchimento interno dos cartões */
+            /* padding: 20%; /* Preenchimento interno dos cartões */
         }
 
         /* Estilos personalizados */
         .card {
-            border: none; /* Remova as bordas dos cartões */
-            max-width: 18rem; /* Ajuste a largura máxima do cartão */
+            border-color:#792882 ;  
+            /* Remova as bordas dos cartões */
+            border-width: 50px
+            max-width: 20rem;
+            /* Ajuste a largura máxima do cartão */}
 
-        }
+       
 
         .card-img-top {
-            max-height: 200px; /* Ajuste a altura máxima da imagem do cartão */
-            object-fit: cover; /* Redimensione a imagem para preencher o espaço */
+            max-height: 200px;
+            /* Ajuste a altura máxima da imagem do cartão */
+            object-fit: cover;
+            /* Redimensione a imagem para preencher o espaço */
         }
 
         .card-title {
-            font-size: 1.25rem; /* Tamanho do título do cartão */
-            margin-top: 10px; /* Margem superior do título */
+            font-size: 1.25rem;
+            /* Tamanho do título do cartão */
+            margin-top: 10px;
+            /* Margem superior do título */
         }
 
         .card-text {
-            font-size: 1rem; /* Tamanho do texto do cartão */
-            text-align: justify; /* Alinhamento do texto do cartão */
+            font-size: 1rem;
+            /* Tamanho do texto do cartão */
+            text-align: justify;
+            /* Alinhamento do texto do cartão */
         }
+
+        /*Fim card */
+
+
 
         /*começo footer */
 
         footer {
-        background-image: linear-gradient(#535353a4,#000000);
-        /*background-color: rgb(63, 63, 63);*/
-        padding: 10px;
-    }
+            background-image: linear-gradient(#535353a4, #000000);
+            /*background-color: rgb(63, 63, 63);*/
+            padding: 10px;
+        }
 
-    .footer-info {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .contact-info {
-        color: white;
-        font-size: medium;
-    }
-
-    .end-info {
-        color: white;
-        font-size: medium;
-    }
-
-    .footer-text {
-        text-align: center;
-        color: white;
-
-    }
-
-    .insta {
-        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-        -webkit-background-clip: text;
-
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        cursor: pointer;
-    }
-
-    .face {
-        color: #3B5998;
-        cursor: pointer;
-    }
-
-    .tw {
-        color: #00acee;
-        cursor: pointer;
-    }
-
-    .mess {
-        color: #3B5998;
-        cursor: pointer;
-
-    }
-
-    .whats {
-        color: rgb(50, 192, 14);
-        cursor: pointer;
-    }
-
-
-    @media screen and (max-width:600px) {
-        footer .footer-info {
+        .footer-info {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-info {
+            color: white;
+            font-size: medium;
+        }
+
+        .end-info {
+            color: white;
+            font-size: medium;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: white;
 
         }
-    }
+
+        .insta {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            -webkit-background-clip: text;
+
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+        }
+
+        .face {
+            color: #3B5998;
+            cursor: pointer;
+        }
+
+        .tw {
+            color: #00acee;
+            cursor: pointer;
+        }
+
+        .mess {
+            color: #3B5998;
+            cursor: pointer;
+
+        }
+
+        .whats {
+            color: rgb(50, 192, 14);
+            cursor: pointer;
+        }
+
+
+        @media screen and (max-width:600px) {
+            footer .footer-info {
+                display: flex;
+                flex-direction: column;
+
+            }
+        }
 
         /*fim footer */
 
-
-
-
-
-
+        .navbar {
+            background-image: linear-gradient(#535353a4, #000000);
+        }
     </style>
 </head>
+
 <body>
+    <!--Começo Nav bar---->
 
-    <!-- navegação navbar do Bootstrap -->
-    <nav class="navbar navbar-dark bg-info">
-      <div class="container-fluid d-flex justify-content-center align-items-center">
-        <span class="navbar-brand mb-0 h1">Cursos</span>
-      </div>
-    </nav>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 custom-card">
-                <!-- Card -->
-                <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick adfadfadfadfasdfadfasdfadsfadfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfexample text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 custom-form">
-                <!-- Formulário -->
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Nome completo</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Endereço de Email</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                        <div id="emailHelp" class="form-text">Nós nunca campartilharemos seus dados com ninguem.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Telefone</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Quero receber notícias</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand active" href="index.html">
+                <img src="logo.stext.png" width="60" height="50" class="d-inline-block align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Parcerias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Login
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Entrar</a></li>
+                            <li><a class="dropdown-item" href="#">Cadastre-se</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                               
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Digite aqui sua busca . . ."
+                        aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Pesquisa</button>
                 </form>
             </div>
         </div>
+    </nav>
+ <!--fim Nav bar---->
+
+    <H1> Cursos da Trampo360°</H1>
+                <h2>Explore novos horizontes na Trampo360°. Inscreva-se e impulsione sua carreira tech!</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 border-0">
+                <div class="card custom-margin custom-padding">
+                    <img src="frontend.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Front-end</h5>
+                        <p class="card-text text-justify">Domine a arte do Front-End! Inscreva-se agora para o curso
+                            completo e mergulhe na criação de interfaces incríveis. Transforme-se em um especialista em
+                            desenvolvimento web.</p>
+                        <button type="button" class="btn btn-warning">Inscreva-se</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-margin custom-padding">
+                    <img src="backend.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Back-end</h5>
+                        <p class="card-text text-justify">Construa a base do digital! Inscreva-se no curso Back-End e
+                            aprenda a criar a infraestrutura por trás das aplicações web. Torne-se um mestre da lógica e
+                            funcionalidade.</p>
+                        <button type="button" class="btn btn-warning">Inscreva-se</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-margin custom-padding">
+                    <img src="fullstack.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fullstack</h5>
+                        <p class="card-text text-justify">Seja um criador de soluções completas! Inscreva-se no curso
+                            Fullstack e domine o desenvolvimento tanto front-end quanto back-end. Desperte sua
+                            versatilidade tecnológica agora.</p>
+                        <button type="button" class="btn btn-warning">Inscreva-se</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- navegação navbar do Bootstrap -->
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Separated link</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
-    
-    <!-- navegação cards cursos do Bootstrap -->
-
-
-    <!-- navegação + 3 cards cursos do Bootstrap -->
-
-    <div class="container">  
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card custom-margin custom-padding">
-            <img src="assets/frontend.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Frontend</h5>
-              <p class="card-text text-justify">Em resumo, o desenvolvedor frontend desempenha um papel crucial na criação de interfaces de usuário atraentes, interativas e eficientes para sites e aplicativos, garantindo uma experiência positiva para os usuários finais.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card custom-margin custom-padding">
+                    <img src="unix.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Unix</h5>
+                        <p class="card-text">Desvende os mistérios do Unix! Inscreva-se no curso e domine o sistema
+                            operacional amplamente utilizado. Expanda suas habilidades técnicas e conquiste o comando
+                            total.</p>
+                        <button type="button" class="btn btn-warning">Inscreva-se</button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card custom-margin custom-padding">
-            <img src="assets/backend.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Backend</h5>
-              <p class="card-text text-justify">Resumindo, o desenvolvedor backend é responsável por criar a infraestrutura tecnológica que suporta as funcionalidades dos aplicativos e sites, garantindo que eles operem de maneira confiável, segura e eficiente.</p>
+            <div class="col-md-4">
+                <div class="card custom-margin custom-padding">
+                    <img src="cloud.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud</h5>
+                        <p class="card-text">Alcance as alturas da tecnologia! Inscreva-se no curso de Cloud e aprenda a
+                            gerenciar e otimizar serviços na nuvem. Leve suas habilidades para o próximo nível da
+                            inovação.</p>
+                        <button type="button" class="btn btn-warning">Inscreva-se</button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card custom-margin custom-padding">
-            <img src="assets/fullstack.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Fullstack</h5>
-              <p class="card-text text-justify">Os desenvolvedores fullstack têm a capacidade de criar projetos mais independentes e podem ser particularmente valiosos em ambientes onde os recursos são limitados ou quando a agilidade é uma prioridade. No entanto, em projetos de grande escala, equipes maiores tendem a ter desenvolvedores especializados em cada camada para atingir níveis mais profundos de expertise.</p>
+            <div class="col-md-4">
+                <div class="card custom-margin custom-padding">
+                    <img src="segurançainf.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Segurança da informação</h5>
+                        <p class="card-text">Proteja o mundo digital! Inscreva-se no curso de Segurança da Informação,
+                            aprenda a defender sistemas contra ameaças cibernéticas. Torne-se o guardião da era digital!!
+                        </p>
+                        
+                        <button type="button" class="btn btn-warning">Inscreva-se</button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-
-    <div class="container">  
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card custom-margin custom-padding">
-            <img src="assets/unix.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Unix</h5>
-              <p class="card-text">Os administradores de sistemas Unix/Linux desempenham um papel fundamental na operação e na manutenção de infraestruturas de TI. Eles garantem que os sistemas estejam disponíveis, seguros e funcionando de maneira eficiente, contribuindo para o sucesso das operações de tecnologia de uma organização.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card custom-margin custom-padding">
-            <img src="assets/cloud.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Cloud</h5>
-              <p class="card-text">Desenvolvedores de nuvem desempenham um papel fundamental na migração de aplicativos tradicionais para a nuvem, bem como no desenvolvimento de novos aplicativos nativos da nuvem. Eles ajudam as organizações a aproveitar os benefícios da escalabilidade, flexibilidade e disponibilidade que a nuvem oferece.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card custom-margin custom-padding">
-            <img src="assets/segurançainf.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Segurança da informação</h5>
-              <p class="card-text">Os profissionais de segurança da informação desempenham um papel crítico na proteção contra ameaças cibernéticas em um mundo cada vez mais digital. Suas habilidades são essenciais para manter a integridade, a confidencialidade e a disponibilidade das informações nas organizações.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <!-- navegação empresas parceiras do Bootstrap -->
 
-    <!-- navegação cards empresas parceiras do Bootstrap -->
+    <!---Rodapé-->
+
     <footer>
-      <div class="footer-info">
-          <div class="contact-info">
+        <div class="footer-info">
+            <div class="contact-info">
 
-              <h5>Telefone para contato</h5>
-              </p>
-              <p> (11) 3858-0777 </p>
-              <p> (11) 97770-3952</p>
-          </div>
-          <div class="end-info">
-              <h5>Endereço</h5>
-              <p>Rua Gaivota, 125 - Bairro Moema</p>
-              <p> São Paulo - SP</p>
-          </div>
-          <div class="social-media text-white">
-              <h5> Nossas mídias sociais</h5>
-              <i class="bi bi-instagram insta fs-4"
-                  onclick="window.open('https://www.instagram.com/', '_blank')"></i>
-              <i class="bi bi-facebook face fs-4"
-                  onclick="window.open('https://www.facebook.com/', '_blank')"></i>
-              <i class="bi bi-twitter tw fs-4" onclick="window.open('https://www.twitter.com/', '_blank')"></i>
-              <i class="bi bi-messenger mess fs-4"
-                  onclick="window.open('https://www.messenger.com/', '_blank')"></i>
-              <i class="bi bi-whatsapp whats fs-4 "
-                  onclick="window.open('https://web.whatsapp.com/', '_blank')"></i>
-          </div>
-      </div>
-      <div class="footer-text">
-          <p>&copy; 2023 Trampo360°. Todos os direitos reservados.</p>
-      </div>
-  </footer>
+                <h5>Telefone para contato</h5>
+                </p>
+                <p> (11) 3858-0777 </p>
+                <p> (11) 97770-3952</p>
+            </div>
+            <div class="end-info">
+                <h5>Endereço</h5>
+                <p>Rua Gaivota, 125 - Bairro Moema</p>
+                <p> São Paulo - SP</p>
+            </div>
+            <div class="social-media text-white">
+                <h5> Nossas mídias sociais</h5>
+                <i class="bi bi-instagram insta fs-4" onclick="window.open('https://www.instagram.com/', '_blank')"></i>
+                <i class="bi bi-facebook face fs-4" onclick="window.open('https://www.facebook.com/', '_blank')"></i>
+                <i class="bi bi-twitter tw fs-4" onclick="window.open('https://www.twitter.com/', '_blank')"></i>
+                <i class="bi bi-messenger mess fs-4" onclick="window.open('https://www.messenger.com/', '_blank')"></i>
+                <i class="bi bi-whatsapp whats fs-4 " onclick="window.open('https://web.whatsapp.com/', '_blank')"></i>
+            </div>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2023 Trampo360°. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!---fimRodapé-->
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
